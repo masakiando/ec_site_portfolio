@@ -15,7 +15,7 @@ let config = {
   },
   output: {
     path: BUILD_DIR,
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[hash].js'
   },
   module: {
     rules: [
@@ -43,6 +43,9 @@ let config = {
     contentBase: BUILD_DIR,
     compress: true,
     port: 9000,
+    headers: {
+      "X-Csutom-header": "csutom"
+    },
     disableHostCheck: false,
     open: true,
     hot: true
@@ -53,7 +56,8 @@ let config = {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest']
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ]
 }
 
