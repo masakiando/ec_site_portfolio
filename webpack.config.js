@@ -15,7 +15,7 @@ let config = {
   },
   output: {
     path: BUILD_DIR,
-    filename: '[name].js'
+    filename: '[name].[chunkhash].js'
   },
   module: {
     rules: [
