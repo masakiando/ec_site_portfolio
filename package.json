@@ -4,5 +4,20 @@
   "main": "index.js",
   "repository": "https://github.com/masakiando/ec_site_portfolio.git",
   "author": "Your Name <you@example.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack -d"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-react": "6.24.10",
+    "babel-preset-stage-2": "6.24.1",
+    "webpack": "2.6.1"
+  },
+  "dependencies": {
+    "react": "15.6.1",
+    "react-dom": "15.6.1"
+  }
 }
