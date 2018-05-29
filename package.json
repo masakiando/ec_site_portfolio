@@ -9,7 +9,9 @@
     "start": "yarn-run-all --parallel dev lint:watch ",
     "dev": "webpack -d --watch",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
-    "lint:watch": "yarn run lint -- --watch"
+    "lint:watch": "yarn run lint -- --watch",
+    "remove-dist": "rimraf dist",
+    "clean": "yarn run remove-dist && mkdir dist"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -32,6 +34,7 @@
   },
   "dependencies": {
     "react": "15.6.1",
-    "react-dom": "15.6.1"
+    "react-dom": "15.6.1",
+    "rimraf": "^2.6.2"
   }
 }
