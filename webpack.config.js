@@ -39,6 +39,14 @@ let config = {
       }
     ]
   },
+  devServer: {
+    contentBase: BUILD_DIR,
+    compress: true,
+    port: 9000,
+    disableHostCheck: false,
+    open: true,
+    hot: true
+  },
   plugins: [
     new htmlWebpackPlugin({
       template: 'index.html'
