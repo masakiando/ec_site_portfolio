@@ -6,7 +6,10 @@
   "author": "Your Name <you@example.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack -d"
+    "start": "yarn-run-all --parallel dev lint:watch ",
+    "dev": "webpack -d",
+    "lint": "node_modules/.bin/esw webpack.config.* src tools",
+    "lint:watch": "yarn run lint -- --watch"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -14,6 +17,10 @@
     "babel-preset-env": "1.6.0",
     "babel-preset-react": "6.24.10",
     "babel-preset-stage-2": "6.24.1",
+    "eslint": "2.9.0",
+    "eslint-plugin-import": "1.6.1",
+    "eslint-plugin-react": "5.0.1",
+    "eslint-watch": "2.1.11",
     "html-webpack-plugin": "2.30.1",
     "webpack": "2.6.1"
   },

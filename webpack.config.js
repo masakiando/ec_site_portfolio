@@ -1,11 +1,11 @@
-var webpack = require('webpack');
-var path = require('path');
-var htmlWebpackPlugin = require('html-webpack-plugin');
+let webpack = require('webpack');
+let path = require('path');
+let htmlWebpackPlugin = require('html-webpack-plugin');
 
-var BUILD_DIR = path.join(__dirname, 'dist');
-var APP_DIR = path.join(__dirname, 'src');
+let BUILD_DIR = path.join(__dirname, 'dist');
+let APP_DIR = path.join(__dirname, 'src');
 
-var config = {
+let config = {
   entry: APP_DIR + '/app.js',
   output: {
     path: BUILD_DIR,
@@ -26,6 +26,6 @@ var config = {
       template: 'index.html'
     })
   ]
-}
+};
 
 module.exports = config;
