@@ -9,10 +9,10 @@ let config = {
   entry: APP_DIR + '/app.js',
   output: {
     path: BUILD_DIR,
-    filename: 'app.bundle.js'
+    filename: 'bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.(js|jsx)$/,
         // include: APP_DIR,
@@ -27,6 +27,10 @@ let config = {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: 'file-loader?name=[name].[ext]'
+      }
     ]
   },
   plugins: [
@@ -34,6 +38,6 @@ let config = {
       template: 'index.html'
     })
   ]
-};
+}
 
 module.exports = config;
