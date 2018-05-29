@@ -4,12 +4,18 @@ let htmlWebpackPlugin = require('html-webpack-plugin');
 
 let BUILD_DIR = path.join(__dirname, 'dist');
 let APP_DIR = path.join(__dirname, 'src');
+const VENDOR_LIBS = [
+  'react', 'react-dom'
+];
 
 let config = {
-  entry: APP_DIR + '/app.js',
+  entry: {
+    bundle: APP_DIR + '/app.js',
+    vendor: VENDOR_LIBS
+  },
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -36,6 +42,9 @@ let config = {
   plugins: [
     new htmlWebpackPlugin({
       template: 'index.html'
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['vendor', 'manifest']
     })
   ]
 }
