@@ -4,7 +4,7 @@ import './styles/styles.scss';
 
 class App extends React.Component {
   render () {
-    return <p> hello  Hello React !!!!</p>;
+    return <p>Hello Hello React !!!!</p>;
   }
 }
 

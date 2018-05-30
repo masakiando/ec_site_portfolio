@@ -1,20 +1,22 @@
 let webpack = require('webpack');
 let path = require('path');
 let htmlWebpackPlugin = require('html-webpack-plugin');
+var hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true';
 
 let BUILD_DIR = path.join(__dirname, 'dist');
-let APP_DIR = path.join(__dirname, 'src');
+let APP_DIR = path.join(__dirname, 'src/app.js');
 const VENDOR_LIBS = [
   'react', 'react-dom'
 ];
 
 let config = {
   entry: {
-    bundle: APP_DIR + '/app.js',
+    bundle: [ APP_DIR, hotMiddlewareScript ],
     vendor: VENDOR_LIBS
   },
   output: {
     path: BUILD_DIR,
+    publicPath: '/',
     filename: '[name].[hash].js'
   },
   module: {
@@ -57,6 +59,7 @@ let config = {
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest']
     }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ]
 }
