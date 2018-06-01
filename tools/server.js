@@ -1,7 +1,10 @@
-const express = require('express');
+import express from 'express';
 import webpack from 'webpack';
 import open from 'open';
 import config from '../webpack.config.js';
+/* eslint-disable no-console */
+import colors from 'colors';
+console.log('starting srcServer...'.white);
 
 const port = 8080;
 const app = express();

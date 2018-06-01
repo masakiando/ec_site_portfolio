@@ -1,17 +1,17 @@
 let webpack = require('webpack');
 let path = require('path');
 let htmlWebpackPlugin = require('html-webpack-plugin');
-var hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true';
+let hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true';
 
 let BUILD_DIR = path.join(__dirname, 'dist');
-let APP_DIR = path.join(__dirname, 'src/app.js');
+let APP_DIR = path.join(__dirname, 'src');
 const VENDOR_LIBS = [
   'react', 'react-dom'
 ];
 
-let config = {
+export default {
   entry: {
-    bundle: [ APP_DIR, hotMiddlewareScript ],
+    bundle: [ APP_DIR + '/app.js', hotMiddlewareScript ],
     vendor: VENDOR_LIBS
   },
   output: {
@@ -62,6 +62,4 @@ let config = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ]
-}
-
-module.exports = config;
+};
