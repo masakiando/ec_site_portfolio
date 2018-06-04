@@ -1,14 +1,29 @@
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-body {
+* {
   margin: 0;
   padding: 0;
-  background: #aaabff;
-  font-family: 'Roboto', sans-serif;
-  background-image: url('./images/react-logo.png');
-  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #4c4c4c;
+  font-family: $rockwell;
+  padding: 0%;
+  margin: 0;
+  font-size: 1.6rem;
+}
+header {
+  background-color: #fff;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
 }

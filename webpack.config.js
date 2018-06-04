@@ -11,7 +11,7 @@ const VENDOR_LIBS = [
 
 export default {
   entry: {
-    bundle: [ APP_DIR + '/app.js', hotMiddlewareScript ],
+    bundle: [ APP_DIR + '/index.js', hotMiddlewareScript ],
     vendor: VENDOR_LIBS
   },
   output: {
