@@ -10,7 +10,7 @@ const Header = () => {
           className="main-header__head"
           role="navigation"
         >
-          nav
+         nav
         </div>
         <div
           className="main-header__body"
