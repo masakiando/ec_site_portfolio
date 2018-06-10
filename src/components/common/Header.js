@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from './Navigation';
 
 const Header = () => {
   return (
@@ -10,8 +11,9 @@ const Header = () => {
           className="main-header__head"
           role="navigation"
         >
-         nav
+         <Navigation />
         </div>
+
         <div
           className="main-header__body"
         >
