@@ -18,4 +18,19 @@ describe('Navigation Component Test'.white, () => {
     expect(wrapper.find('a').length).toBe(7);
     expect(wrapper.find('span').length).toBe(4);
   });
+
+  it('Navigation プロパティ設定のテスト'.white, () => {
+    const wrapper = setup();
+    expect(wrapper.find('nav').prop('className'))
+    .toEqual('global-navbar');
+    expect(wrapper.find('nav').prop('role'))
+    .toEqual('navigation');
+    expect(wrapper.find('ul').prop('className'))
+    .toEqual('global-navbar__list');
+    expect(wrapper.find('li').prop('className'))
+    .toEqual('global-navbar__item');
+    expect(wrapper.find('span').prop('className'))
+    .toEqual('global-navbar__icon');
+  });
 });
+// navbar__links
