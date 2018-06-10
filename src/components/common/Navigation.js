@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavigationItems from './NavigationItems';
 
 class Navigation extends Component {
 
@@ -6,35 +7,9 @@ class Navigation extends Component {
     return (
       <nav
         className="global-navbar"
-        role="navigation">
-        <ul className="global-navbar__items">
-          <li>
-            <a href="">aaa</a></li>
-          <li>
-            <a href=""></a></li>
-          <li>
-            <a href="">
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-        </ul>
-        <ul className="global-navbar__items">
-          <li>
-            <a href="">
-              <span></span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span></span>
-            </a>
-          </li>
-          <li>
-            <a href=""></a></li>
-          <li>
-            <a href=""></a></li>
-        </ul>
+        role="navigation"
+      >
+        <NavigationItems />
       </nav>
     );
   }
