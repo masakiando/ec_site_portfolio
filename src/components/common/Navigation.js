@@ -4,7 +4,36 @@ class Navigation extends Component {
 
   render() {
     return (
-      <nav>nav</nav>
+      <nav>
+        <ul>
+          <li>
+            <a href=""></a></li>
+          <li>
+            <a href=""></a></li>
+          <li>
+            <a href="">
+              <span></span>
+              <span></span>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="">
+              <span></span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span></span>
+            </a>
+          </li>
+          <li>
+            <a href=""></a></li>
+          <li>
+            <a href=""></a></li>
+        </ul>
+      </nav>
     );
   }
 }
