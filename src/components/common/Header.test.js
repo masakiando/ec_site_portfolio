@@ -16,7 +16,7 @@ describe('test header', () => {
     console.log(wrapper.find('header').childAt(0).childAt(1).prop('className'));
 
     expect(wrapper.find('header').length).toBe(1);
-    expect(wrapper.find('div').length).toBe(3);
+    expect(wrapper.find('div').length).toBe(4);
     expect(wrapper.find('header').prop('className'))
     .toEqual('main-header block');
     expect(wrapper.find('header').childAt(0).prop('className'))
