@@ -4,8 +4,10 @@ class Navigation extends Component {
 
   render() {
     return (
-      <nav>
-        <ul>
+      <nav
+        className="global-navbar"
+        role="navigation">
+        <ul className="global-navbar__list">
           <li>
             <a href=""></a></li>
           <li>
@@ -17,7 +19,7 @@ class Navigation extends Component {
             </a>
           </li>
         </ul>
-        <ul>
+        <ul className="global-navbar__list">
           <li>
             <a href="">
               <span></span>
