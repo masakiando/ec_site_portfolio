@@ -7,9 +7,9 @@ class Navigation extends Component {
       <nav
         className="global-navbar"
         role="navigation">
-        <ul className="global-navbar__list">
+        <ul className="global-navbar__items">
           <li>
-            <a href=""></a></li>
+            <a href="">aaa</a></li>
           <li>
             <a href=""></a></li>
           <li>
@@ -19,7 +19,7 @@ class Navigation extends Component {
             </a>
           </li>
         </ul>
-        <ul className="global-navbar__list">
+        <ul className="global-navbar__items">
           <li>
             <a href="">
               <span></span>

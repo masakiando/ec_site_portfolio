@@ -31,10 +31,10 @@ describe('Navigation Component Test'.white, () => {
     .toEqual('navigation');
     console.log('     - ul[0] className test');
     expect(wrapper.find('nav').childAt(0).prop('className'))
-    .toEqual('global-navbar__list');
+    .toEqual('global-navbar__items');
     console.log('     - ul[1] className test');
     expect(wrapper.find('nav').childAt(1).prop('className'))
-    .toEqual('global-navbar__list');
+    .toEqual('global-navbar__items');
 
   });
 });
