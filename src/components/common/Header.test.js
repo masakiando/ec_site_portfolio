@@ -1,3 +1,4 @@
+import colors from 'colors';
 import expect from 'expect';
 import React from 'react';
 import {mount, shallow} from 'enzyme';
@@ -8,12 +9,12 @@ function setup() {
   return mount(<Header {...props} />);
 }
 
-describe('test header', () => {
-  it('test header', () => {
+describe('Header Component Test'.white, () => {
+  it('Header 構成のテスト'.white, () => {
     const wrapper = setup();
-    console.log(wrapper.find('header').childAt(0).prop('className'));
-    console.log(wrapper.find('header').childAt(0).childAt(0).prop('className'));
-    console.log(wrapper.find('header').childAt(0).childAt(1).prop('className'));
+    // console.log(wrapper.find('header').childAt(0).prop('className'));
+    // console.log(wrapper.find('header').childAt(0).childAt(0).prop('className'));
+    // console.log(wrapper.find('header').childAt(0).childAt(1).prop('className'));
 
     expect(wrapper.find('header').length).toBe(1);
     expect(wrapper.find('div').length).toBe(4);
