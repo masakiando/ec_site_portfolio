@@ -18,9 +18,9 @@ describe('Navigation Component Test'.white, () => {
     console.log('     - 要素数 test');
     expect(wrapper.find('nav').length).toBe(1);
     expect(wrapper.find('ul').length).toBe(2);
-    expect(wrapper.find('li').length).toBe(7);
-    expect(wrapper.find('a').length).toBe(7);
-    expect(wrapper.find('span').length).toBe(4);
+    expect(wrapper.find('li').length).toBe(11);
+    expect(wrapper.find('a').length).toBe(6);
+    expect(wrapper.find('span').length).toBe(3);
   });
 
   it('Navigation プロパティ設定のテスト'.white, () => {

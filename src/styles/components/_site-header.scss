@@ -1,12 +1,4 @@
 /* Header Styles */ // _site-header.scss
 header {
-  background-color: $haeder-base-dev;
-  font-family: 'Oswald', sans-serif;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-
-  img {
-    max-width: 240px;
-  }
+  background-color: #fff;
 }
