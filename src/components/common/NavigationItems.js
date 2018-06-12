@@ -10,7 +10,7 @@ const NavigationItems = () => {
       <li><a className="global-navbar__item" href="#">アプリケーションのダウンロード</a></li>
       <li><div className="link-separator"></div></li>
 
-      <li><span className="global-navbar__sns-0">接続</span>
+      <li><font className="global-navbar__sns-0">接続</font>
        <a href="" className="global-navba__sns"></a>
       </li>
       <li><a href="" className="global-navba__sns-2"></a></li>
