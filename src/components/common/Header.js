@@ -3,22 +3,10 @@ import Navigation from './Navigation';
 
 const Header = () => {
   return (
-    <header
-      className="main-header block"
-      role="banner">
+    <header className="main-header" role="banner">
       <div className="main-header__container">
-        <div
-          className="main-header__head"
-          role="navigation"
-        >
-         <Navigation />
-        </div>
-
-        <div
-          className="main-header__body"
-        >
-         search
-        </div>
+        <Navigation />
+        <div className="main-header__body">search</div>
       </div>
     </header>
   );

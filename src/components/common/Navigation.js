@@ -5,10 +5,7 @@ class Navigation extends Component {
 
   render() {
     return (
-      <nav
-        className="global-navbar"
-        role="navigation"
-      >
+      <nav className="global-navbar" role="navigation">
         <NavigationItems />
       </nav>
     );
