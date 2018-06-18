@@ -61,12 +61,16 @@ main {//aに対して
     padding: 20px;
 }
 
-h1 {//aに対して
+h1 {
     color: yellow;
     margin: 0;
     margin-bottom: 20px;
     font-size: 20.5pt;
     font-weight: normal;
+}
+
+h2 {
+  color: blue;
 }
 
 a[href='#top'] {

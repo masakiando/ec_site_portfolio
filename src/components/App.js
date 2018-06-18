@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router';
+
 import Header from './common/Header';
 import Footer from './common/Footer';
 
@@ -7,6 +9,7 @@ class App extends React.Component {
     return (
       <div>
         <Header/>
+          {this.props.children}
         <Footer/>
       </div>
     );

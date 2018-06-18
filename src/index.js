@@ -1,12 +1,13 @@
 import React from 'react';
 import {render} from 'react-dom';
-import App from './components/App';
+import { Router, browserHistory } from 'react-router';
+import routes from './routes';
 import './styles/styles.scss';
 
-class Index extends React.Component {
-  render () {
-    return <App/>;
-  }
-}
-
-render(<Index/>, document.getElementById('root'));
+render(
+      <Router
+        history={browserHistory}
+        routes={routes}
+      />,
+    document.getElementById('root')
+);
