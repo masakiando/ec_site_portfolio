@@ -7,9 +7,6 @@ class App extends React.Component {
     return (
       <div>
         <Header/>
-        <main>
-          <div>main components</div>
-        </main>
         <Footer/>
       </div>
     );
