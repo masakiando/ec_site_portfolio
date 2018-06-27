@@ -1,13 +1,11 @@
 import React from 'react';
 import {render} from 'react-dom';
-import { Router, browserHistory } from 'react-router';
-import routes from './routes';
+// import { Router, browserHistory } from 'react-router';
+// import routes from './routes';
 import './styles/styles.scss';
+import App from './components/App';
 
 render(
-      <Router
-        history={browserHistory}
-        routes={routes}
-      />,
+      <App/>,
     document.getElementById('root')
 );

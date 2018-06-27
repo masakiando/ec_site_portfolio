@@ -9,7 +9,7 @@ const VENDOR_LIBS = [
   'react', 'react-dom'
 ];
 
-export default {
+let config = {
   entry: {
     bundle: [ APP_DIR + '/index.js', hotMiddlewareScript ],
     vendor: VENDOR_LIBS
@@ -63,3 +63,5 @@ export default {
     new webpack.HotModuleReplacementPlugin()
   ]
 };
+
+module.exports = config;

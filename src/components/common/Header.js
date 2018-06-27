@@ -1,6 +1,10 @@
 import React from 'react';
-// import Navigation from './Navigation';
+import { Link, IndexLink } from 'react-router';
+import logo from './logo.png';
 
+let imgStyle = {
+  width: 180,
+};
 const Header = () => {
   return (
     <header id="top">
@@ -8,15 +12,16 @@ const Header = () => {
         <div className="container">
           <nav role="navigation">
              <ul className="haeder-ul">
-                <li><a href="#web">チャネル販売者</a></li>
-                <li><a href="#talks">アプリケーションのダウンロード</a></li>
-                <li><a href="#trainings">接続</a></li>
+                <li><a href="">チャネル販売者</a></li>
+                <li><a href="">アプリケーションのダウンロード</a></li>
+                <li><a href="">接続</a></li>
              </ul>
              <ul className="haeder-ul">
-                  <li><a href="#articles">通知</a></li>
-                  <li><a href="#contact">ヘルプ</a></li>
-                  <li><a href="#contact">サインアップ</a></li>
-                  <li><a href="#contact">サインイン</a></li>
+                  <li><Link to="" className="box-link" activeClassName="active">test</Link></li>
+                  <li><a href="">通知</a></li>
+                  <li><a href="">ヘルプ</a></li>
+                  <li><a href="">サインアップ</a></li>
+                  <li><a href="">サインイン</a></li>
              </ul>
           </nav>
         </div>
@@ -24,14 +29,16 @@ const Header = () => {
 
       <div className="grid-wrap">
         <div className="container">
-        <div className="grid">
-          <div className="logo itemA">
+        <div className="       header-body">
+          <div className="logo header-body__grid-ItemA">
             <a href="">
-              <img src="https://placehold.jp/162x50.png" alt="logo"/>
+              <img  src={logo}
+                    alt="logo"
+                    style={imgStyle}/>
             </a>
           </div>
 
-          <form className="logo itemB">
+          <form className="logo header-body__grid-ItemB">
               <div className="wrapper">
 
                 <div className="form__search">
@@ -56,7 +63,7 @@ const Header = () => {
               </div>
           </form>
 
-        <div className="itemD">
+        <div className="header-body__grid-ItemD">
            <a href="">
              <i
                className=" fas fa-shopping-cart fa-2x "
@@ -64,6 +71,7 @@ const Header = () => {
              </i>
           </a>
         </div>
+
      </div>
     </div>
   </div>
