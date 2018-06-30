@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, IndexLink } from 'react-router';
 import logo from './logo.png';
+// import test1 from './test1.svg';
 
 let imgStyle = {
   width: 180,
@@ -32,9 +33,7 @@ const Header = () => {
         <div className="       header-body">
           <div className="logo header-body__grid-ItemA">
             <a href="">
-              <img  src={logo}
-                    alt="logo"
-                    style={imgStyle}/>
+              <img src={logo} style={imgStyle} alt="logo"/>
             </a>
           </div>
 
