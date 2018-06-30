@@ -1,14 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-
-import HotwordApi from '../../api/mockHotwordApi';
-
-console.log(HotwordApi);
-
-let hotwordImgStyle = {
-  height:80,
-  width: 110
-};
+import HotwordPage from './HotwordPage';
 
 class MainPage extends React.Component {
   constructor(props) {
@@ -212,95 +204,7 @@ class MainPage extends React.Component {
             </div>
 
             {/*  hot-word Component  */}
-            <div className="hot-word">
-              <div className="hot-word__grid-ItemA">
-                <h2><span>hot-search</span></h2>
-              </div>
-              <div className="hot-word__grid-ItemB">
-                <ul className="hotword__item-list">
-                  <li className="hotword__item">
-                     <a href="" className="hotword__card">
-                       <div className="hotword__container">
-                         <div className="hotword_img" style={hotwordImgStyle}/>
-                          <div className="hotword__card-label">label name</div>
-                       </div>
-                     </a>
-                  </li>
-                  <li className="hotword__item">
-                     <a href="" className="hotword__card">
-                       <div className="hotword__container">
-                          <div className="hotword_img" style={hotwordImgStyle}/>
-                          <div className="hotword__card-label">label name</div>
-                       </div>
-                     </a>
-                  </li>
-                  <li className="hotword__item">
-                     <a href="" className="hotword__card">
-                       <div className="hotword__container">
-                          <div className="hotword_img" style={hotwordImgStyle}/>
-                          <div className="hotword__card-label">label name</div>
-                       </div>
-                     </a>
-                  </li>
-                  <li className="hotword__item">
-                     <a href="" className="hotword__card">
-                       <div className="hotword__container">
-                          <div className="hotword_img" style={hotwordImgStyle}/>
-                          <div className="hotword__card-label">label name</div>
-                       </div>
-                     </a>
-                  </li>
-                  <li className="hotword__item">
-                     <a href="" className="hotword__card">
-                       <div className="hotword__container">
-                          <div className="hotword_img" style={hotwordImgStyle}/>
-                          <div className="hotword__card-label">label name</div>
-                       </div>
-                     </a>
-                  </li>
-                  <li className="hotword__item">
-                     <a href="" className="hotword__card">
-                       <div className="hotword__container">
-                          <div className="hotword_img" style={hotwordImgStyle}/>
-                          <div className="hotword__card-label">label name</div>
-                       </div>
-                     </a>
-                  </li>
-                  <li className="hotword__item">
-                     <a href="" className="hotword__card">
-                       <div className="hotword__container">
-                          <div className="hotword_img" style={hotwordImgStyle}/>
-                          <div className="hotword__card-label">label name</div>
-                       </div>
-                     </a>
-                  </li>
-                  <li className="hotword__item">
-                     <a href="" className="hotword__card">
-                       <div className="hotword__container">
-                          <div className="hotword_img" style={hotwordImgStyle}/>
-                          <div className="hotword__card-label">label name</div>
-                       </div>
-                     </a>
-                  </li>
-                  <li className="hotword__item">
-                     <a href="" className="hotword__card">
-                       <div className="hotword__container">
-                          <div className="hotword_img" style={hotwordImgStyle}/>
-                          <div className="hotword__card-label">label name</div>
-                       </div>
-                     </a>
-                  </li>
-                  <li className="hotword__item">
-                     <a href="" className="hotword__card">
-                       <div className="hotword__container">
-                          <div className="hotword_img" style={hotwordImgStyle}/>
-                          <div className="hotword__card-label">label name</div>
-                       </div>
-                     </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <HotwordPage />
           </div>
         </main>
     );
