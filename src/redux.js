@@ -90,7 +90,7 @@ const store = createStore(
     thunk
   ),
   window.devToolsExtension ? window.devToolsExtension() : f => f)
-);
+)
 //store  henkou  go  noatai wo  syutoku check
 store.subscribe(function () {
   console.log(store.getState());
