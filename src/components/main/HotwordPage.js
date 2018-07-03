@@ -1,122 +1,44 @@
 import React from 'react';
+import {connect} from 'react-redux'; // Component(React)とReduxの接続
+import PropTypes from 'prop-types';
+import HotwordList from './HotwordList';
 
 class HotwordPage extends React.Component {
   constructor(props, context) {
     super(props, context);
-
-    // this.state = {
-    //
-    // };
   }
 
   render() {
-    let hotwordImgStyle = {
-      height:80,
-      width: 110
-    };
+    const {HelloHotwordPage, hotwords} = this.props;
 
     return (
       <div className="hot-word">
         <div className="hot-word__grid-ItemA">
-          <h2><span>hot-search</span></h2>
+          <h2><span>{HelloHotwordPage}</span></h2>
         </div>
         <div className="hot-word__grid-ItemB">
-          <ul className="hotword__item-list">
-            <li className="hotword__item">
-               <a href="" className="hotword__card">
-                 <div className="hotword__container">
-                   <div className="hotword_img" style={hotwordImgStyle}/>
-                    <div className="hotword__card-label">label name</div>
-                 </div>
-               </a>
-            </li>
-            <li className="hotword__item">
-               <a href="" className="hotword__card">
-                 <div className="hotword__container">
-                    <div className="hotword_img" style={hotwordImgStyle}/>
-                    <div className="hotword__card-label">label name</div>
-                 </div>
-               </a>
-            </li>
-            <li className="hotword__item">
-               <a href="" className="hotword__card">
-                 <div className="hotword__container">
-                    <div className="hotword_img" style={hotwordImgStyle}/>
-                    <div className="hotword__card-label">label name</div>
-                 </div>
-               </a>
-            </li>
-            <li className="hotword__item">
-               <a href="" className="hotword__card">
-                 <div className="hotword__container">
-                    <div className="hotword_img" style={hotwordImgStyle}/>
-                    <div className="hotword__card-label">label name</div>
-                 </div>
-               </a>
-            </li>
-            <li className="hotword__item">
-               <a href="" className="hotword__card">
-                 <div className="hotword__container">
-                    <div className="hotword_img" style={hotwordImgStyle}/>
-                    <div className="hotword__card-label">label name</div>
-                 </div>
-               </a>
-            </li>
-            <li className="hotword__item">
-               <a href="" className="hotword__card">
-                 <div className="hotword__container">
-                    <div className="hotword_img" style={hotwordImgStyle}/>
-                    <div className="hotword__card-label">label name</div>
-                 </div>
-               </a>
-            </li>
-            <li className="hotword__item">
-               <a href="" className="hotword__card">
-                 <div className="hotword__container">
-                    <div className="hotword_img" style={hotwordImgStyle}/>
-                    <div className="hotword__card-label">label name</div>
-                 </div>
-               </a>
-            </li>
-            <li className="hotword__item">
-               <a href="" className="hotword__card">
-                 <div className="hotword__container">
-                    <div className="hotword_img" style={hotwordImgStyle}/>
-                    <div className="hotword__card-label">label name</div>
-                 </div>
-               </a>
-            </li>
-            <li className="hotword__item">
-               <a href="" className="hotword__card">
-                 <div className="hotword__container">
-                    <div className="hotword_img" style={hotwordImgStyle}/>
-                    <div className="hotword__card-label">label name</div>
-                 </div>
-               </a>
-            </li>
-            <li className="hotword__item">
-               <a href="" className="hotword__card">
-                 <div className="hotword__container">
-                    <div className="hotword_img" style={hotwordImgStyle}/>
-                    <div className="hotword__card-label">label name</div>
-                 </div>
-               </a>
-            </li>
-          </ul>
+         <HotwordList hotwords={hotwords}/>
         </div>
       </div>
     );
   }
 }
 
-// HotwordPage.propTypes = {
-//   hotwords: PropTypes.array.isRequired
-// };
-//
-// function mapStateToProps(state, ownProps) {
-//   return {
-//     hotwords: state.hotwords
-//   };
-// }
+HotwordPage.propTypes = {
+  hotwords: PropTypes.array.isRequired,
+  HelloHotwordPage: PropTypes.string
+};
 
-export default HotwordPage;
+HotwordPage.defaultProps = {
+  HelloHotwordPage: "Thanks for HotwordPage!"
+};
+
+function mapStateToProps(state, ownProps) {
+  return {
+    hotwords: state.hotwords
+  };
+}
+
+export default connect(
+  mapStateToProps,null
+)(HotwordPage);
