@@ -440,6 +440,7 @@ form button {
 
   .hotword__item {
     padding: 0px 5px;
+    margin-bottom: 1em;
   }
 }
 .hotword__container {
@@ -468,6 +469,47 @@ form button {
 }
 .hotword_img {
   background-image: url(./images/hotword.80.110.png);
+  background-size: 100% 100%;
+}
+
+/*  Categor Component  */
+.categor__item-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+  .categor__item {
+    padding: 0px 5px;
+    margin-bottom: 1em;
+  }
+}
+.categor__container {
+  position: relative;
+  z-index:1000;
+}
+.categor__card-label {
+   position: absolute;
+   z-index:1000;
+   // text-overflow: ellipsis;
+   overflow: hidden;
+   white-space: nowrap;
+   bottom: 0;
+   background-color: rgba(0,0,0,.4);
+   left: 0;
+   right: 0;
+   color: #fff;
+   text-align: center;
+   padding: 5px 0;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+
+   &:hover {
+     background-color: rgba(0,0,0,.7);
+   }
+}
+.categor_img {
+  background-image: url(./images/categor.80.110.png);
   background-size: 100% 100%;
 }
 

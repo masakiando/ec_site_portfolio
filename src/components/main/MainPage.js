@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 import HotwordPage from './HotwordPage';
+import CategorPage from './CategorPage';
 
 class MainPage extends React.Component {
   constructor(props) {
@@ -205,6 +206,7 @@ class MainPage extends React.Component {
 
             {/*  hot-word Component  */}
             <HotwordPage />
+            <CategorPage />
           </div>
         </main>
     );
