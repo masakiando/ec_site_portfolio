@@ -13,10 +13,10 @@ class HotwordPage extends React.Component {
 
     return (
       <div className="hot-word">
-        <div className="hot-word__grid-ItemA">
+        <div className="hot-word__title">
           <h2><span>{HelloHotwordPage}</span></h2>
         </div>
-        <div className="hot-word__grid-ItemB">
+        <div className="hot-word__content">
          <HotwordList hotwords={hotwords}/>
         </div>
       </div>
