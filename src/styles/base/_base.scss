@@ -477,7 +477,7 @@ form button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
+  flex-grow: 1;
 
   .categor__item {
     padding: 0px 5px;
@@ -487,6 +487,17 @@ form button {
 .categor__container {
   position: relative;
   z-index:1000;
+  height: 150px;
+  width: 110px;
+  background-color: rgba(255,255,255,1);
+}
+.categor_img__container {
+  padding-top: 10px;
+  height: 110px;
+  width: 110px;
+}
+.categor_img {
+  margin: auto;
 }
 .categor__card-label {
    position: absolute;
@@ -494,11 +505,10 @@ form button {
    // text-overflow: ellipsis;
    overflow: hidden;
    white-space: nowrap;
-   bottom: 0;
-   background-color: rgba(0,0,0,.4);
+   background-color: rgba(255,255,255,1);
    left: 0;
    right: 0;
-   color: #fff;
+   color: rgba(0,0,0,.8);
    text-align: center;
    padding: 5px 0;
    -moz-box-sizing: border-box;
