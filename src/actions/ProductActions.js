@@ -3,7 +3,7 @@ import ProductApi from '../api/mockProductApi';
 
 export function loadProductsSuccess(categories) {
   debugger;
-  return { type: types.LOAD_CATEGORIES_SUCCESS, categories};
+  return { type: types.LOAD_PRODUCT_SUCCESS, categories};
 }
 
 export function Products() {
