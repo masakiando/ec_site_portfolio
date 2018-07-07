@@ -1,5 +1,4 @@
 import delay from './delay';
-import faker from 'faker';
 // setTimeoutを使用して、AJAX呼び出しの遅延をシミュレートします。
 //すべての呼び出しが約束を返します。
 // It uses setTimeout to simulate the delay of an AJAX call.
@@ -20,7 +19,7 @@ const products = arr.map(function(element, index, array) {
 
     const product = {
       id: element,
-      product_name: faker.commerce.productName + '_' + element,
+      product_name: 'Product' + '_' + element,
       cover: element + "_product.173.173.png",
       price: 500,
       sale_status: getBoolean,
@@ -38,7 +37,7 @@ const products = arr.map(function(element, index, array) {
     return product;
 });
 
-class productApi {
+class ProductApi {
   static getAllProducts() {
     return new Promise((resolve, reject) => {
       // 指定された遅延の後に、コードの断片または関数を実行します。
@@ -49,4 +48,4 @@ class productApi {
   }
 }
 
-export default productApi;
+export default ProductApi;

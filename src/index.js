@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import configureStore from './store/configureStore';
 import {loadHotwords} from './actions/HotwordActions';
 import {Categories} from './actions/CategorActions';
+import {Products} from './actions/ProductActions';
 import {Provider} from 'react-redux';
 
 import './styles/styles.scss';
@@ -12,6 +13,7 @@ import App from './components/App';
 const store = configureStore();
 store.dispatch(loadHotwords());
 store.dispatch(Categories());
+store.dispatch(Products());
 
 render(
     <Provider store={store}>
