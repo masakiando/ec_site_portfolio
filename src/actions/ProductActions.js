@@ -1,9 +1,9 @@
 import * as types from './actionTypes';
 import ProductApi from '../api/mockProductApi';
 
-export function loadProductsSuccess(categories) {
+export function loadProductsSuccess(products) {
   debugger;
-  return { type: types.LOAD_PRODUCT_SUCCESS, categories};
+  return { type: types.LOAD_PRODUCT_SUCCESS, products};
 }
 
 export function Products() {
