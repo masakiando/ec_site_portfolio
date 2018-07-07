@@ -1,9 +1,7 @@
 import delay from './delay';
 import faker from 'faker';
-//このファイルは、以下のハードコードされたデータを使用してWeb APIをモックします。
 // setTimeoutを使用して、AJAX呼び出しの遅延をシミュレートします。
 //すべての呼び出しが約束を返します。
-// This file mocks a web API by working with the hard-coded data below.
 // It uses setTimeout to simulate the delay of an AJAX call.
 // All calls return promises.
 const arr = new Array(300)
