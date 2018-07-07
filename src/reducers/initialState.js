@@ -1,4 +1,5 @@
 export default {
   hotwords: [],
-  categories: []
+  categories: [],
+  products: []
 };
