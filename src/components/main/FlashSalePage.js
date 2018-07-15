@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import {connect} from 'react-redux';
 
 class FlashSale extends React.Component {
   constructor(props) {
@@ -74,4 +74,12 @@ class FlashSale extends React.Component {
   }
 }
 
-export default FlashSale;
+function mapStateToProps(state, ownProps) {
+  return {
+    saleproducts: state.saleproducts
+  };
+}
+
+export default connect(
+  mapStateToProps, null
+) (FlashSale);
