@@ -13,8 +13,12 @@ const HotwordList  = ({
              <div className="hotword__container">
                <div className="hotword_img"
                   style={
-                    {backgroundImage: `url("./images/hotwords/${hotword.cover}")`},
-                     hotwordImgStyle
+                    {
+                      backgroundImage: `
+                      url(require("./images/hotwords/${hotword.cover}"))`,
+                      height:80,
+                      width: 110
+                    }
                   }
                     />
                <div className="hotword__card-label">
@@ -33,8 +37,10 @@ HotwordList.propTypes = {
 };
 
 export default HotwordList;
+// let hotwordImgStyle = {
+//   backgroundImage: `url(require("./images/hotwords/${hotword.cover}"))`,
+//   height:80,
+//   width: 110
+// };
 
-let hotwordImgStyle = {
-  height:80,
-  width: 110
-};
+// backgroundImage: `url("./images/hotwords/${hotword.cover}")`},
