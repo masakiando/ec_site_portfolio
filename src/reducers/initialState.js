@@ -1,5 +1,6 @@
 export default {
   hotwords: [],
   categories: [],
-  products: []
+  products: [],
+  saleproducts: []
 };

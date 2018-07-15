@@ -2,16 +2,16 @@
 import * as types from './actionTypes';
 import saleProductApi from '../api/mockFlashSaleApi';
 
-export function loadsaleProductsSuccess(saleProducts) {
+export function loadsaleProductsSuccess(saleproducts) {
   debugger;
-  return { type: types.LOAD_SALEPRODUCT_SUCCESS, saleProducts};
+  return { type: types.LOAD_SALEPRODUCT_SUCCESS, saleproducts};
 }
 
 export function saleProducts() {
   return function(dispatch) {
     return saleProductApi.getAllaleProducts()
-    .then(saleProducts => {
-      dispatch(loadsaleProductsSuccess(saleProducts));
+    .then(saleproducts => {
+      dispatch(loadsaleProductsSuccess(saleproducts));
     }).catch(error => {
       throw(error);
     });
