@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 import HotwordPage from './HotwordPage';
 import CategorPage from './CategorPage';
+import FlashSalePage from './FlashSalePage';
 
 class MainPage extends React.Component {
   constructor(props) {
@@ -33,6 +34,7 @@ class MainPage extends React.Component {
       this.mouseEnter = this.mouseEnter.bind(this);
       this.mouseLeave = this.mouseLeave.bind(this);
       this.imgChange = this.imgChange.bind(this);
+      // this.nextseleOne = this.nextseleOne.bind(this);
   }
 
   componentDidMount() {
@@ -97,7 +99,6 @@ class MainPage extends React.Component {
 
   prevOne(){
     const aaa = this.state.active % this.state.slides.length;
-    console.log(aaa);
     const bbb = aaa + 3;
     if (this.state.active === 0) {
         this.setState({
@@ -124,6 +125,21 @@ class MainPage extends React.Component {
     }
   }
 
+  // nextseleOne(){
+  //   const arr = new Array(15)
+  //   const aaa = this.state.test % arr.length;
+  //   const bbb = aaa + 5;
+  //   if( bbb ===  arr.length ) {
+  //     this.setState({
+  //         test: 0
+  //     });
+  //   } else {
+  //     this.setState({
+  //         test: bbb
+  //     });
+  //   }
+  // }
+
   setSliderStyles(){
       const transition = this.state.active * - 786;
       return {
@@ -131,6 +147,14 @@ class MainPage extends React.Component {
         transform: 'translateX(' + transition + 'px)'
       };
   }
+  // setSaleSliderStyles(){
+  //     const arr = new Array(16);
+  //     const transition = this.state.test * - 200;
+  //     return {
+  //       width: ( arr.length * 200 ) + 'px',
+  //       transform: 'translateX(' + transition + 'px)'
+  //     };
+  // }
 
 
 
@@ -153,6 +177,26 @@ class MainPage extends React.Component {
         )
       );
   }
+
+  // seleSlides() {
+  //   const arr = new Array(16)
+  //     .fill(null)
+  //     .map((v, i) => i + 1);
+  //
+  //   return arr.map( (item, index) => (
+  //       <div
+  //         className="sele-slide-item"
+  //         key={index}
+  //         style={
+  //           {
+  //             backgroundColor: 'blue'
+  //           }
+  //         }
+  //         >{index}
+  //       </div>
+  //       )
+  //     );
+  // }
 
   render() {
     return (
@@ -207,6 +251,8 @@ class MainPage extends React.Component {
             {/*  hot-word Component  */}
             <HotwordPage />
             <CategorPage />
+            <FlashSalePage />
+
           </div>
         </main>
     );
