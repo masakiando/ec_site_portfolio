@@ -18,7 +18,7 @@ const Header = () => {
                 <li><a href="">接続</a></li>
              </ul>
              <ul className="haeder-ul">
-                  <li><Link to="" className="box-link" activeClassName="active">test</Link></li>
+                  <li><a href="">test</a></li>
                   <li><a href="">通知</a></li>
                   <li><a href="">ヘルプ</a></li>
                   <li><a href="">サインアップ</a></li>
@@ -41,7 +41,12 @@ const Header = () => {
               <div className="wrapper">
 
                 <div className="form__search">
-                  <input placeholder="Search for products, brands and shops"></input>
+                  <input
+                    name="name"
+                    placeholder="test"
+
+                    value="hello"
+                    type="text"/>
                   <button type="submit">
                     <i className="fa fa-search fa-2x" aria-hidden="true"></i>
                   </button>
