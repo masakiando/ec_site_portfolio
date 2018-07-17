@@ -75,13 +75,18 @@ const y = {
 color:'OrangeRed',
 fontSize: '1.2em'
 };
+//Ul要素の位置はnextseleOneクリックイベントによりtransition変化します
 const FlashSaleList  = ({
-  saleproducts
+  saleproducts,
+  listPositon
 }) => {
-
+  const transition = listPositon * -200;//移動させる距離をつくる
   return (
     <Div>
-    <Ul >
+    <Ul style={{
+        width: ( saleproducts.length * 200 ) + 'px',
+        transform: 'translateX(' + transition + 'px)'
+      }}>
       {saleproducts.map(saleproduct =>
         <Li key={saleproduct.id}>
           <a href="">
@@ -98,7 +103,7 @@ const FlashSaleList  = ({
                   <div style={b}>
                     <div style={c}></div>
                   </div>
-                  <span style={d}>10 AAAA </span>
+                  <span style={d}>10 {saleproduct.id} </span>
                 </div>
               </Figcaption>
             </Figure>
@@ -112,7 +117,8 @@ const FlashSaleList  = ({
 };
 
 FlashSaleList.propTypes = {
-  saleproducts: PropTypes.array
+  saleproducts: PropTypes.array,
+  listPositon: PropTypes.number
 };
 
 export default FlashSaleList;
