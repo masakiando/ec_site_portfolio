@@ -1,7 +1,7 @@
 //src/api/mockFlashSaleApi.js
 import delay from './delay';
 
-const arr = new Array(15)
+const arr = new Array(16)
   .fill(null)
   .map((v,i)=>i + 1);
 

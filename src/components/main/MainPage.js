@@ -125,21 +125,6 @@ class MainPage extends React.Component {
     }
   }
 
-  // nextseleOne(){
-  //   const arr = new Array(15)
-  //   const aaa = this.state.test % arr.length;
-  //   const bbb = aaa + 5;
-  //   if( bbb ===  arr.length ) {
-  //     this.setState({
-  //         test: 0
-  //     });
-  //   } else {
-  //     this.setState({
-  //         test: bbb
-  //     });
-  //   }
-  // }
-
   setSliderStyles(){
       const transition = this.state.active * - 786;
       return {
@@ -147,15 +132,6 @@ class MainPage extends React.Component {
         transform: 'translateX(' + transition + 'px)'
       };
   }
-  // setSaleSliderStyles(){
-  //     const arr = new Array(16);
-  //     const transition = this.state.test * - 200;
-  //     return {
-  //       width: ( arr.length * 200 ) + 'px',
-  //       transform: 'translateX(' + transition + 'px)'
-  //     };
-  // }
-
 
 
   imgSlides() {
@@ -177,26 +153,6 @@ class MainPage extends React.Component {
         )
       );
   }
-
-  // seleSlides() {
-  //   const arr = new Array(16)
-  //     .fill(null)
-  //     .map((v, i) => i + 1);
-  //
-  //   return arr.map( (item, index) => (
-  //       <div
-  //         className="sele-slide-item"
-  //         key={index}
-  //         style={
-  //           {
-  //             backgroundColor: 'blue'
-  //           }
-  //         }
-  //         >{index}
-  //       </div>
-  //       )
-  //     );
-  // }
 
   render() {
     return (

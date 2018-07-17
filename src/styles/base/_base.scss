@@ -523,30 +523,23 @@ form button {
   background-size: 100% 100%;
 }
 
-#sale-slider {
-  width: 1200px;
-  height: 244px;
-	overflow: hidden;
-  border-radius: 3px;
-  position: relative;
-}
-.sale-wrapper {
-	left: 0;
-	will-change: transform;
-  -webkit-transition: .5s all linear;
-  position: relative;
-}
-.sele-slide-item{
-  width: 200px;
-  height: 244px;
-	float: left;
-  // background-color: pink;
-  background-image: url("https://cf.shopee.vn/file/1fb450b3672e93050f1b46542a00149e");
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-size: 100% 100%;
-  border-radius: 3px;
-}
+// .sale-wrapper {
+// 	left: 0;
+// 	will-change: transform;
+//   -webkit-transition: .5s all linear;
+//   position: relative;
+// }
+// .sele-slide-item{
+//   width: 200px;
+//   height: 244px;
+// 	float: left;
+//   // background-color: pink;
+//   background-image: url("https://cf.shopee.vn/file/1fb450b3672e93050f1b46542a00149e");
+//   background-repeat: no-repeat;
+//   background-size:contain;
+//   background-size: 100% 100%;
+//   border-radius: 3px;
+// }
 
 @media (min-resolution: 3dppx) {
 
@@ -573,7 +566,9 @@ form button {
     }
 }
 
-
+ul {
+  float: left;
+}
 @media (min-width: 800px) {
 
 }

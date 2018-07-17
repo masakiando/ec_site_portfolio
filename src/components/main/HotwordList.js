@@ -14,8 +14,7 @@ const HotwordList  = ({
                <div className="hotword_img"
                   style={
                     {
-                      backgroundImage: `
-                      url(require("./images/hotwords/${hotword.cover}"))`,
+                      backgroundImage: `url(require("images/hotwords/${hotword.cover}"))`,
                       height:80,
                       width: 110
                     }
