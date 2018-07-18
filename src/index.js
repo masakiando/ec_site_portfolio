@@ -5,6 +5,7 @@ import {loadHotwords} from './actions/HotwordActions';
 import {Categories} from './actions/CategorActions';
 import {Products} from './actions/ProductActions';
 import {saleProducts} from './actions/FlashSaleActions';
+import {popularProducts} from './actions/popularProductActions';
 import {Provider} from 'react-redux';
 
 import './styles/styles.scss';
@@ -16,6 +17,7 @@ store.dispatch(loadHotwords());
 store.dispatch(Categories());
 store.dispatch(Products());
 store.dispatch(saleProducts());
+store.dispatch(popularProducts());
 
 render(
     <Provider store={store}>
