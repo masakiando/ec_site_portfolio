@@ -3,6 +3,7 @@ import {Link} from 'react-router';
 import HotwordPage from './HotwordPage';
 import CategorPage from './CategorPage';
 import FlashSalePage from './FlashSalePage';
+import PopularPage from './PopularPage';
 
 class MainPage extends React.Component {
   constructor(props) {
@@ -208,6 +209,7 @@ class MainPage extends React.Component {
             <HotwordPage />
             <CategorPage />
             <FlashSalePage />
+            <PopularPage />
 
           </div>
         </main>
