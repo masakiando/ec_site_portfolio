@@ -43,7 +43,7 @@ class FlashSale extends React.Component {
     const { listPositon } = this.state;
     return (
       <div className="flash-sale">
-        <div className="categor__title">
+        <div className="flash-sale_title">
           <h2><span>Thanks for Flash Sale!</span></h2>
         </div>
         <button
