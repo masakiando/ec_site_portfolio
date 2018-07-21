@@ -20,17 +20,25 @@ const products = arr.map(function(element, index, array) {
     const product = {
       id: element,
       product_name: 'Product' + '_' + element,
+      product_discrption: 'product_discrptionproduct_discrptionproduct_discrption',
       cover: element + "_product.173.173.png",
+      indexcover: `product_0.190.190.png`,
       price: 500,
       sale_status: getBoolean,
-      number_of_stocks: 10
+      number_of_stocks: 10,
+      heart: 9987,
+      star: 3457,
+      starScore: 4,
+      shipping_free: true
     };
     for(let key in product){
       if (key == 'sale_status') {
         if (product[key] == true) {
           product['discount_rate'] = getRate;
+          product['discount_price'] = product['price']-(product['price']/100*product['discount_rate']);
         } else {
           product['discount_rate'] =  0;
+          product['discount_price'] = 0;
         }
       }
     }

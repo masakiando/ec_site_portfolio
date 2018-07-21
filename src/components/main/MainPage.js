@@ -4,6 +4,7 @@ import HotwordPage from './HotwordPage';
 import CategorPage from './CategorPage';
 import FlashSalePage from './FlashSalePage';
 import PopularPage from './PopularPage';
+import DailyDiscoverPage from './DailyDiscoverPage';
 
 class MainPage extends React.Component {
   constructor(props) {
@@ -210,7 +211,7 @@ class MainPage extends React.Component {
             <CategorPage />
             <FlashSalePage />
             <PopularPage />
-
+            <DailyDiscoverPage />
           </div>
         </main>
     );
