@@ -3,5 +3,6 @@ export default {
   categories: [],
   products: [],
   saleproducts: [],
-  popularproducts: []
+  popularproducts: [],
+  malls: []
 };
