@@ -1,49 +1,41 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import FooterGuidance from './FooterGuidance';
 
-const Footer = () => {
-  return (
-    <footer>
-      <nav >
-        <h1 title="item1"></h1>
-        <h1 title="item2"></h1>
-        <h1 title="item3"></h1>
-        <h1 title="item4"></h1>
-        <h1 title="item5"></h1>
-        <h1 title="item6"></h1>
-        <h1 title="item7"></h1>
-        <h1 title="item8"></h1>
-        <h1 title="item9"></h1>
-        <h1 title="item10"></h1>
-         <ul >
+class Footer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hello:'hello'
+    };
+  }
+  render() {
+    const { info } = this.props;
+    return (
+      <footer>
+        <div className="container">
+          <FooterGuidance info={info}/>
+          <div>CategoriesMap</div>
+          <div>General information</div>
+          <div>© 2018 Shopee. All Rights Reserved</div>
+        </div>
+      </footer>
+    );
+  }
+}
 
-            <li><a href="#talks">Talks</a></li>
-            <li><a href="#trainings">Trainings</a></li>
-            <li><a href="#articles">Articles</a></li>
-            <li><a href="#contact">Contact</a></li>
-         </ul>
-         <ul>
-            <li><a href="#web">Web Design and Development</a></li>
-            <li><a href="#talks">Talks</a></li>
-            <li><a href="#trainings">Trainings</a></li>
-            <li><a href="#articles">Articles</a></li>
-            <li><a href="#contact">Contact</a></li>
-         </ul>
-         <ul>
-            <li><a href="#web">Web Design and Development</a></li>
-            <li><a href="#talks">Talks</a></li>
-            <li><a href="#trainings">Trainings</a></li>
-            <li><a href="#articles">Articles</a></li>
-            <li><a href="#contact">Contact</a></li>
-         </ul>
-         <ul>
-            <li><a href="#web">Web Design and Development</a></li>
-            <li><a href="#talks">Talks</a></li>
-            <li><a href="#trainings">Trainings</a></li>
-            <li><a href="#articles">Articles</a></li>
-            <li><a href="#contact">Contact</a></li>
-         </ul>
-      </nav>
-    </footer>  );
+Footer.propTypes = {
+  info: PropTypes.object
+};
+
+Footer.defaultProps = {
+  info: {
+    Basic: "SHOPEE PHILIPPINES - BUY AND SELL ON MOBILE OR ONLINE",
+    Buyers: "BUYERS LOVE SHOPPING ON SHOPEE",
+    sales: "Enjoy special deals, sales, promos and discounts only on Shopee Philippines",
+    Sell: "SELL EFFORTLESSLY ON SHOPEE",
+    Shipping: "SHOPEE FREE SHIPPING"
+  }
 };
 
 export default Footer;
